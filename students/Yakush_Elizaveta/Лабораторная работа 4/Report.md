@@ -498,7 +498,7 @@ concurrent = 1
 Первоначально была задача, чтобы внутри `.gitlab-ci.yml` `DOCKER_REGISTRY` имел следующий вид:
 
 ```yaml
-    DOCKER_REGISTRY: "nexus.local:5000"
+    DOCKER_REGISTRY: "nexus:5000"
 ```
 
 Данный вариант не сработал. В дальнейшем была попытка подключения по IP ВМ:
