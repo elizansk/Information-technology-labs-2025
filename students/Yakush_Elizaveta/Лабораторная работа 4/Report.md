@@ -15,7 +15,7 @@
 ### Выполняемые действия 
 
 1. Мной был создан и настроен `docker-compose.yaml` файл со следующим содержанием 
-***(рис - 1. [ docker-compose1](students/Yakush_Elizaveta/Лабораторная работа 4/screen/docker-compose1.png))***:
+***(рис - 1. [docker-compose1](screen/docker-compose1.png))***:
 
 
 ```yaml
@@ -139,8 +139,8 @@ services:
 docker compose up -d
 ```
 
-3. Со своей личной машины подключилась к gitlab - 192.168.1.142:8081 ***(рис - 2. [ GitlabLoginPage](students/Yakush_Elizaveta/Лабораторная работа 4/screen/GitlabLoginPage.png))***
-и к nexus - 192.168.1.142:8082 ***(рис - 3. [ NexusLoginPage](students/Yakush_Elizaveta/Лабораторная работа 4/screen/NexusLoginPage.png))***.
+3. Со своей личной машины подключилась к gitlab - 192.168.1.142:8081 ***(рис - 2. [ GitlabLoginPage](screen/GitlabLoginPage.png))***
+и к nexus - 192.168.1.142:8082 ***(рис - 3. [ NexusLoginPage](screen/NexusLoginPage.png))***.
 192.168.1.142 - внешний IP моей ВМ. 8081, 8082 - порт на котором развернут Gitlab и Nexus.
 
 ### Возникшие проблемы
@@ -208,7 +208,7 @@ def test_longest_word():
 pytest
 ```
 
-4. Сделала commit и push на удаленный репозиторий ***(рис - 4. [ RepositoryStructure](students/Yakush_Elizaveta/Лабораторная работа 4/screen/RepositoryStructure.png))***:
+4. Сделала commit и push на удаленный репозиторий ***(рис - 4. [ RepositoryStructure](screen/RepositoryStructure.png))***:
 
 ```shell
 git commit -m "Добавлены файлы test_text_tool text_tool requirements"
@@ -245,7 +245,7 @@ test:
 docker compose down
 ```
 
-2. Для создания gitlab-runner мне было необходимо отредактировать `docker-compose.yaml` ***(рис - 5.[ docker-compose](students/Yakush_Elizaveta/Лабораторная работа 4/screen/docker-compose.png))***:
+2. Для создания gitlab-runner мне было необходимо отредактировать `docker-compose.yaml` ***(рис - 5.[ docker-compose](screen/docker-compose.png))***:
 
 ```yaml
 version: "3.9"
@@ -340,7 +340,7 @@ docker exec -it gitlab-runner gitlab-runner register
    3. Описание - оставлено по умолчанию (имя контейнера)
    4. Способ запуска - docker
    5. image - docker:24
-9. Вернулась на главный экран и увидела, что раннер успешно зарегестрирован ***(рис 6 - [RunnerSuccessfullyRegistered](students/Yakush_Elizaveta/Лабораторная работа 4/screen/RunnerSuccessfullyRegistered.png))***.
+9. Вернулась на главный экран и увидела, что раннер успешно зарегестрирован ***(рис 6 - [RunnerSuccessfullyRegistered](screen/RunnerSuccessfullyRegistered.png))***.
 
 #### Возникшие проблемы
 
@@ -377,9 +377,9 @@ cat /nexus/admin.password
 3. Зашла в Nexus логин - admin, пароль - полученный ранее пароль. Сменила пароль на новый;
 4. Зашла в gitlab адресу 192.168.1.142:8081;
 5. Далее Setting -> CI/CD -> Variables
-6. Добавила 2 переменные с key NEXUS_PASSWORD и NEXUS_USER. Value такие же как и у логина и пароля Nexus ***(рис 7 - [GitLabVariables](students/Yakush_Elizaveta/Лабораторная работа 4/screen/GitLabVariables.png))***;
+6. Добавила 2 переменные с key NEXUS_PASSWORD и NEXUS_USER. Value такие же как и у логина и пароля Nexus ***(рис 7 - [GitLabVariables](screen/GitLabVariables.png))***;
 7. Вернулась в Nexus. setting -> repository -> create repository -> docker hosted;
-8. Создала репозиторий ***(рис 8 - [NexusRepository](students/Yakush_Elizaveta/Лабораторная работа 4/screen/NexusRepository.png))***
+8. Создала репозиторий ***(рис 8 - [NexusRepository](screen/NexusRepository.png))***
 
 ### Редактирование .gitlab-ci.yml, добавление Dockerfile и редактирование /etc/docker/daemon.json
 
@@ -521,9 +521,9 @@ concurrent = 1
 
 ### Получение результата в Gitlab и Nexus
 
-1. Зашла в Gitlab в свой проект. Зафиксировала успешность пайплана в Gitlab ***(рис 9 - [SuccessfulPipeline](students/Yakush_Elizaveta/Лабораторная работа 4/screen/SuccessfulPipeline.png))***;
-2. Зашла в Nexus. Browse -> docker. Зафиксировала успешность загрузки Docker-образа (`python-lab`) ***(рис 10 - [SuccessfulDockerNexus](students/Yakush_Elizaveta/Лабораторная работа 4/screen/SuccessfulDockerNexus.png))***.
-3. Итоговое содержание репозиория на Gitlad ***(рис 11 - [ SuccessfulGitLab](students/Yakush_Elizaveta/Лабораторная работа 4/screen/SuccessfulGitLab.png))***;
+1. Зашла в Gitlab в свой проект. Зафиксировала успешность пайплана в Gitlab ***(рис 9 - [SuccessfulPipeline](screen/SuccessfulPipeline.png))***;
+2. Зашла в Nexus. Browse -> docker. Зафиксировала успешность загрузки Docker-образа (`python-lab`) ***(рис 10 - [SuccessfulDockerNexus](screen/SuccessfulDockerNexus.png))***.
+3. Итоговое содержание репозиория на Gitlad ***(рис 11 - [ SuccessfulGitLab](screen/SuccessfulGitLab.png))***;
 
 ## Заключение
 
